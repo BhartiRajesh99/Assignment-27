@@ -78,6 +78,8 @@ class Complex
         }
         int operator==(int l)
         {
+             if(real==l&&img==0)
+                return 1;
             return 0;
         }
         friend Complex operator+(int,Complex);
@@ -108,6 +110,8 @@ Complex operator*(int j,Complex D)
 }
 int operator==(int l,Complex U)
 {  
+    if(U.real==l&&U.img==0)
+        return 1;
     return 0;
 }
 int main()
